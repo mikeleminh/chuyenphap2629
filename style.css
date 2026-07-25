@@ -257,3 +257,142 @@ body{
     background:#ff7a7a;
 
 }
+/* EVENTS */
+
+.events-page{
+
+    width:90%;
+    max-width:1100px;
+    margin:140px auto 80px;
+
+}
+
+.events-page h1{
+
+    text-align:center;
+    font-size:45px;
+    font-family:"Baloo 2";
+
+}
+
+.events-page>p{
+
+    text-align:center;
+    margin-bottom:60px;
+    color:#666;
+
+}
+
+.timeline{
+
+    position:relative;
+
+    margin-left:30px;
+
+    border-left:4px solid #A7D8FF;
+
+}
+
+.timeline-item{
+
+    position:relative;
+
+    margin-bottom:45px;
+
+    padding-left:40px;
+
+}
+
+.timeline-item::before{
+
+    content:"";
+
+    width:18px;
+    height:18px;
+
+    border-radius:50%;
+
+    background:#5CB8FF;
+
+    position:absolute;
+
+    left:-11px;
+    top:15px;
+
+}
+
+.timeline-date{
+
+    color:#5CB8FF;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+.timeline-content{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.timeline-content:hover{
+
+    transform:translateX(8px);
+
+}
+
+.timeline-content h2{
+
+    margin:15px 0;
+
+}
+
+.timeline-content p{
+
+    line-height:1.8;
+
+}
+
+.status{
+
+    display:inline-block;
+
+    padding:6px 15px;
+
+    border-radius:20px;
+
+    color:white;
+
+    font-size:12px;
+
+    font-weight:600;
+
+}
+
+.upcoming{
+
+    background:#FFB347;
+
+}
+
+.running{
+
+    background:#55C878;
+
+}
+
+.finished{
+
+    background:#A0A0A0;
+
+}
