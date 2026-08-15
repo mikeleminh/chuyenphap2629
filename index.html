@@ -11,28 +11,38 @@
 </head>
 <body class="bg-sky-50/60 text-slate-700 font-['Plus_Jakarta_Sans'] antialiased min-h-screen flex flex-col justify-between">
 
-  <!-- ================= 1. HEADER & TOP BRANDING ================= -->
+  <!-- ================= 1. HEADER & NAVIGATION BAR ================= -->
   <header class="bg-white/90 backdrop-blur-md border-b border-sky-100 sticky top-0 z-50 shadow-sm">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center justify-between gap-4">
       
-      <!-- Logo Trường & Tên Trường/Lớp -->
-      <div class="flex items-center gap-4">
-        <!-- Logo Trường -->
-        <img src="logotruong.png" alt="Logo THPT Chuyên Thăng Long" class="w-14 h-14 rounded-2xl object-contain bg-white border border-sky-100 shadow-sm p-1">
-        
-        <!-- School & Class Name -->
+      <!-- Logo & Tên Trường -->
+      <div class="flex items-center gap-3">
+        <img src="logotruong.png" alt="Logo THPT Chuyên Thăng Long" class="w-12 h-12 rounded-xl object-contain bg-white border border-sky-100 p-0.5 shadow-sm">
         <div>
-          <span class="text-xs font-bold tracking-widest text-sky-500 uppercase block">TRƯỜNG THPT CHUYÊN THĂNG LONG</span>
-          <h1 class="text-2xl font-extrabold text-sky-950 flex items-center gap-2">
-            CHUYÊN PHÁP <span class="bg-sky-500 text-white text-xs px-2.5 py-1 rounded-full font-bold">2026 - 2029</span>
+          <span class="text-[10px] font-bold tracking-widest text-sky-500 uppercase block">THPT CHUYÊN THĂNG LONG</span>
+          <h1 class="text-xl font-extrabold text-sky-950 flex items-center gap-2">
+            CHUYÊN PHÁP <span class="bg-sky-500 text-white text-[10px] px-2 py-0.5 rounded-full font-bold">26–29</span>
           </h1>
         </div>
       </div>
 
+      <!-- NAV MENU 3 MỤC -->
+      <nav class="flex items-center gap-1 bg-sky-50/80 p-1.5 rounded-2xl border border-sky-100/80 text-xs font-bold">
+        <a href="index.html" class="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white text-sky-600 shadow-sm transition">
+          <i data-lucide="home" class="w-4 h-4"></i> Trang chủ
+        </a>
+        <a href="posts.html" class="flex items-center gap-1.5 px-4 py-2 rounded-xl text-slate-600 hover:text-sky-600 hover:bg-white/60 transition">
+          <i data-lucide="newspaper" class="w-4 h-4"></i> Bài viết
+        </a>
+        <a href="events.html" class="flex items-center gap-1.5 px-4 py-2 rounded-xl text-slate-600 hover:text-sky-600 hover:bg-white/60 transition">
+          <i data-lucide="calendar" class="w-4 h-4"></i> Sự kiện
+        </a>
+      </nav>
+
       <!-- Logo Lớp -->
-      <div class="flex items-center gap-3">
-        <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-sky-400 to-cyan-300 p-0.5 shadow-md">
-          <img src="logolop1.png" alt="Logo Lớp Chuyên Pháp" class="w-full h-full object-contain bg-white rounded-[14px] p-1">
+      <div class="hidden md:flex items-center">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-sky-400 to-cyan-300 p-0.5 shadow-sm">
+          <img src="logolop1.png" alt="Logo Lớp" class="w-full h-full object-contain bg-white rounded-[10px] p-0.5">
         </div>
       </div>
 
@@ -53,27 +63,27 @@
         </span>
         
         <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-          Xin chào mọi người! Chúng mình là Chuyên Pháp 26–29, THPT Chuyên Thăng Long! 💙🇫🇷
+          Xin chào mọi người! Chúng mình là Chuyên Pháp 26–29, THPT Chuyên Thăng Long! 💙
         </h2>
         
         <div class="text-slate-600 leading-relaxed text-base sm:text-lg space-y-3">
           <p>
-            Từ những con người đến từ đất Việt, chúng mình cùng hướng về thế giới, cùng hội nhập quốc tế và rồi “giao nhau” tại Chuyên Pháp, Chuyên Thăng Long. 🌏✨
+            Từ những con người đến từ đất Việt, chúng mình cùng hướng về thế giới, cùng hội nhập quốc tế và rồi “giao nhau” tại Chuyên Pháp, Chuyên Thăng Long. 🌏
           </p>
           <p>
             Chào mừng tất cả những thành viên của lớp đến với hành trình 3 năm sắp tới! Hy vọng chúng ta sẽ cùng nhau học tập, trải nghiệm, vượt qua những thử thách và tạo nên thật nhiều kỷ niệm đáng nhớ dưới mái trường Chuyên Thăng Long.
           </p>
           <p class="font-semibold text-sky-600">
-            Một hành trình mới chính thức bắt đầu! 🇫🇷📚
+            Một hành trình mới chính thức bắt đầu! 🇫🇷
           </p>
         </div>
 
         <div class="pt-2 flex flex-wrap justify-center gap-3">
-          <div class="px-4 py-2 rounded-xl bg-sky-50 text-sky-700 text-sm font-semibold border border-sky-100">
-            📍 THPT Chuyên Thăng Long • Đà Lạt
+          <div class="px-4 py-2 rounded-xl bg-sky-50 text-sky-700 text-sm font-semibold border border-sky-100 flex items-center gap-1.5">
+            <i data-lucide="map-pin" class="w-4 h-4 text-sky-500"></i> THPT Chuyên Thăng Long • Đà Lạt
           </div>
-          <div class="px-4 py-2 rounded-xl bg-sky-50 text-sky-700 text-sm font-semibold border border-sky-100">
-            🇫🇷 Niên khóa: 2026 - 2029
+          <div class="px-4 py-2 rounded-xl bg-sky-50 text-sky-700 text-sm font-semibold border border-sky-100 flex items-center gap-1.5">
+            <i data-lucide="graduation-cap" class="w-4 h-4 text-sky-500"></i> Niên khóa: 2026 - 2029
           </div>
         </div>
       </div>
@@ -319,7 +329,7 @@
 
   </main>
 
-  <!-- ================= 4. FOOTER (MẠNG XÃ HỘI LỚP & BẢN QUYỀN) ================= -->
+  <!-- ================= 4. FOOTER ================= -->
   <footer class="bg-white border-t border-sky-100 py-8 px-4 mt-12">
     <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
       
@@ -330,21 +340,30 @@
       </div>
 
       <!-- Social Links (TikTok & Instagram) -->
-      <div class="flex items-center gap-4">
-        <!-- TikTok Link -->
-        <a href="https://www.tiktok.com/@aephap2629" target="_blank" rel="noopener" class="flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-slate-900 text-white text-xs font-bold hover:bg-slate-800 transition shadow-md hover:-translate-y-0.5">
-          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.525 0h3.08c.54 2.8 2.37 5.15 5.09 5.86V9.1c-2.39-.1-4.57-.88-6.3-2.14v8.32c0 4.79-3.88 8.72-8.67 8.72A8.69 8.69 0 0 1 0 15.35c0-4.8 3.89-8.73 8.68-8.73.57 0 1.12.06 1.66.17v3.31a5.41 5.41 0 0 0-1.66-.27c-2.97 0-5.38 2.41-5.38 5.38s2.41 5.38 5.38 5.38 5.38-2.41 5.38-5.38V0z"/></svg>
-          TikTok Lớp
-        </a>
+   <div class="flex items-center gap-4">
+  <!-- Frame lớp -->
+  <a href="https://khunghinh.net/p/ctlchuyenphap2629" target="_blank" rel="noopener"
+     class="flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-sky-500 text-white text-xs font-bold hover:bg-sky-600 transition shadow-md hover:-translate-y-0.5">
+    <i data-lucide="image" class="w-4 h-4"></i>
+    Frame lớp
+  </a>
 
-        <!-- Instagram Link -->
-        <a href="https://www.instagram.com/_.tartyfrenchiee._/" target="_blank" rel="noopener" class="flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 text-white text-xs font-bold hover:opacity-95 transition shadow-md hover:-translate-y-0.5">
-          <i data-lucide="instagram" class="w-4 h-4"></i>
-          Instagram Lớp
-        </a>
-      </div>
+  <!-- TikTok -->
+  <a href="https://www.tiktok.com/@aephap2629" target="_blank" rel="noopener"
+     class="flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-slate-900 text-white text-xs font-bold hover:bg-slate-800 transition shadow-md hover:-translate-y-0.5">
+    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+      <path d="M12.525 0h3.08c.54 2.8 2.37 5.15 5.09 5.86V9.1c-2.39-.1-4.57-.88-6.3-2.14v8.32c0 4.79-3.88 8.72-8.67 8.72A8.69 8.69 0 0 1 0 15.35c0-4.8 3.89-8.73 8.68-8.73.57 0 1.12.06 1.66.17v3.31a5.41 5.41 0 0 0-1.66-.27c-2.97 0-5.38 2.41-5.38 5.38s2.41 5.38 5.38 5.38 5.38-2.41 5.38-5.38V0z"/>
+    </svg>
+    TikTok Lớp
+  </a>
 
-    </div>
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/_.tartyfrenchiee._/" target="_blank" rel="noopener"
+     class="flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 text-white text-xs font-bold hover:opacity-95 transition shadow-md hover:-translate-y-0.5">
+    <i data-lucide="instagram" class="w-4 h-4"></i>
+    Instagram Lớp
+  </a>
+</div>
   </footer>
 
   <!-- Activate Lucide Icons -->
