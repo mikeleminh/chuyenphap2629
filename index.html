@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chuyên Pháp 2026 - 2029 | THPT Chuyên Thăng Long</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-sky-50/60 text-slate-700 font-['Plus_Jakarta_Sans'] antialiased min-h-screen flex flex-col justify-between">
+
+  <!-- ================= 1. HEADER & TOP BRANDING ================= -->
+  <header class="bg-white/90 backdrop-blur-md border-b border-sky-100 sticky top-0 z-50 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      
+      <!-- Logo Trường & Tên Trường/Lớp -->
+      <div class="flex items-center gap-4">
+        <!-- Logo Trường -->
+        <img src="logotruong.png" alt="Logo THPT Chuyên Thăng Long" class="w-14 h-14 rounded-2xl object-contain bg-white border border-sky-100 shadow-sm p-1">
+        
+        <!-- School & Class Name -->
+        <div>
+          <span class="text-xs font-bold tracking-widest text-sky-500 uppercase block">TRƯỜNG THPT CHUYÊN THĂNG LONG</span>
+          <h1 class="text-2xl font-extrabold text-sky-950 flex items-center gap-2">
+            CHUYÊN PHÁP <span class="bg-sky-500 text-white text-xs px-2.5 py-1 rounded-full font-bold">2026 - 2029</span>
+          </h1>
+        </div>
+      </div>
+
+      <!-- Logo Lớp -->
+      <div class="flex items-center gap-3">
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-sky-400 to-cyan-300 p-0.5 shadow-md">
+          <img src="logolop.png" alt="Logo Lớp Chuyên Pháp" class="w-full h-full object-contain bg-white rounded-[14px] p-1">
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-8 space-y-10 w-full flex-grow">
+
+    <!-- ================= 2. KHUNG GIỚI THIỆU LỚP (INTRO BOX) ================= -->
+    <section class="bg-white rounded-3xl p-6 sm:p-10 border border-sky-100 shadow-xl shadow-sky-100/60 relative overflow-hidden">
+      <!-- Decor Background Shapes -->
+      <div class="absolute -top-12 -right-12 w-40 h-40 bg-sky-200/40 rounded-full blur-2xl pointer-events-none"></div>
+      <div class="absolute -bottom-12 -left-12 w-40 h-40 bg-cyan-200/40 rounded-full blur-2xl pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-3xl mx-auto text-center space-y-4">
+        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-100 text-sky-700 text-xs font-bold tracking-wide">
+          <i data-lucide="sparkles" class="w-4 h-4"></i> Bienvenue à la classe de Français!
+        </span>
+        
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          Nơi lưu giữ thanh xuân & khát vọng tuổi trẻ
+        </h2>
+        
+        <p class="text-slate-600 leading-relaxed text-base sm:text-lg">
+          Chào mừng bạn đến với ngôi nhà chung của tập thể <strong class="text-sky-600">Chuyên Pháp khóa 2026 - 2029</strong> trường THPT Chuyên Thăng Long! Nơi hội tụ những tâm hồn đam mê ngôn ngữ & văn hóa Pháp, cùng nhau kiến tạo hành trình 3 năm cấp 3 rực rỡ và đáng nhớ nhất.
+        </p>
+
+        <div class="pt-2 flex flex-wrap justify-center gap-3">
+          <div class="px-4 py-2 rounded-xl bg-sky-50 text-sky-700 text-sm font-semibold border border-sky-100">
+            📍 THPT Chuyên Thăng Long • Đà Lạt
+          </div>
+          <div class="px-4 py-2 rounded-xl bg-sky-50 text-sky-700 text-sm font-semibold border border-sky-100">
+            🇫🇷 Niên khóa: 2026 - 2029
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 3. KHUNG THÀNH VIÊN LỚP (MEMBERS BOX) ================= -->
+    <section class="bg-white rounded-3xl p-6 sm:p-10 border border-sky-100 shadow-xl shadow-sky-100/60 space-y-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-sky-100 pb-6">
+        <div>
+          <h3 class="text-2xl font-bold text-slate-900 flex items-center gap-2">
+            <i data-lucide="users" class="w-6 h-6 text-sky-500"></i> Thành Viên Lớp
+          </h3>
+          <p class="text-slate-500 text-sm mt-1">Gương mặt những thành viên xuất sắc của Chuyên Pháp 26-29</p>
+        </div>
+
+        <!-- Bộ lọc tổ / chức vụ -->
+        <div class="flex flex-wrap gap-2">
+          <button class="px-3.5 py-1.5 rounded-xl bg-sky-500 text-white text-xs font-semibold shadow-sm hover:bg-sky-600 transition">Tất cả</button>
+          <button class="px-3.5 py-1.5 rounded-xl bg-sky-50 text-sky-600 text-xs font-semibold hover:bg-sky-100 transition">Ban cán sự</button>
+          <button class="px-3.5 py-1.5 rounded-xl bg-sky-50 text-sky-600 text-xs font-semibold hover:bg-sky-100 transition">Tổ 1</button>
+          <button class="px-3.5 py-1.5 rounded-xl bg-sky-50 text-sky-600 text-xs font-semibold hover:bg-sky-100 transition">Tổ 2</button>
+          <button class="px-3.5 py-1.5 rounded-xl bg-sky-50 text-sky-600 text-xs font-semibold hover:bg-sky-100 transition">Tổ 3</button>
+          <button class="px-3.5 py-1.5 rounded-xl bg-sky-50 text-sky-600 text-xs font-semibold hover:bg-sky-100 transition">Group 4</button>
+        </div>
+      </div>
+
+      <!-- Members Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
+        
+        <!-- Member Card Demo 1 -->
+        <div class="bg-sky-50/50 hover:bg-sky-50 border border-sky-100 rounded-2xl p-4 text-center group transition duration-300 hover:shadow-lg hover:shadow-sky-100">
+          <div class="w-20 h-20 mx-auto mb-3 rounded-full bg-sky-200 border-2 border-white shadow-md overflow-hidden group-hover:scale-105 transition duration-300 flex items-center justify-center text-sky-600 font-bold text-xl">
+            Avatar
+          </div>
+          <span class="inline-block px-2 py-0.5 bg-sky-200/60 text-sky-800 text-[10px] font-bold rounded-full mb-1">Lớp trưởng</span>
+          <h4 class="font-bold text-slate-800 text-base">Họ và Tên</h4>
+          <p class="text-xs text-slate-500 mt-0.5">"Quote yêu thích..."</p>
+        </div>
+
+        <!-- Member Card Demo 2 -->
+        <div class="bg-sky-50/50 hover:bg-sky-50 border border-sky-100 rounded-2xl p-4 text-center group transition duration-300 hover:shadow-lg hover:shadow-sky-100">
+          <div class="w-20 h-20 mx-auto mb-3 rounded-full bg-sky-200 border-2 border-white shadow-md overflow-hidden group-hover:scale-105 transition duration-300 flex items-center justify-center text-sky-600 font-bold text-xl">
+            Avatar
+          </div>
+          <span class="inline-block px-2 py-0.5 bg-cyan-100 text-cyan-800 text-[10px] font-bold rounded-full mb-1">Tổ 1</span>
+          <h4 class="font-bold text-slate-800 text-base">Họ và Tên</h4>
+          <p class="text-xs text-slate-500 mt-0.5">"Quote yêu thích..."</p>
+        </div>
+
+        <!-- Member Card Demo 3 -->
+        <div class="bg-sky-50/50 hover:bg-sky-50 border border-sky-100 rounded-2xl p-4 text-center group transition duration-300 hover:shadow-lg hover:shadow-sky-100">
+          <div class="w-20 h-20 mx-auto mb-3 rounded-full bg-sky-200 border-2 border-white shadow-md overflow-hidden group-hover:scale-105 transition duration-300 flex items-center justify-center text-sky-600 font-bold text-xl">
+            Avatar
+          </div>
+          <span class="inline-block px-2 py-0.5 bg-cyan-100 text-cyan-800 text-[10px] font-bold rounded-full mb-1">Tổ 2</span>
+          <h4 class="font-bold text-slate-800 text-base">Họ và Tên</h4>
+          <p class="text-xs text-slate-500 mt-0.5">"Quote yêu thích..."</p>
+        </div>
+
+        <!-- Member Card Demo 4 -->
+        <div class="bg-sky-50/50 hover:bg-sky-50 border border-sky-100 rounded-2xl p-4 text-center group transition duration-300 hover:shadow-lg hover:shadow-sky-100">
+          <div class="w-20 h-20 mx-auto mb-3 rounded-full bg-sky-200 border-2 border-white shadow-md overflow-hidden group-hover:scale-105 transition duration-300 flex items-center justify-center text-sky-600 font-bold text-xl">
+            Avatar
+          </div>
+          <span class="inline-block px-2 py-0.5 bg-cyan-100 text-cyan-800 text-[10px] font-bold rounded-full mb-1">Group 4</span>
+          <h4 class="font-bold text-slate-800 text-base">Họ và Tên</h4>
+          <p class="text-xs text-slate-500 mt-0.5">"Quote yêu thích..."</p>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ================= 4. FOOTER (MẠNG XÃ HỘI LỚP) ================= -->
+  <footer class="bg-white border-t border-sky-100 py-8 px-4 mt-12">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+      
+      <!-- Left Copyright -->
+      <div class="text-center sm:text-left">
+        <p class="font-bold text-sky-900 text-base">Chuyên Pháp 26-29 • THPT Chuyên Thăng Long</p>
+        <p class="text-xs text-slate-400 mt-1">© 2026 Tous droits réservés.</p>
+      </div>
+
+      <!-- Social Links (TikTok & Instagram) -->
+      <div class="flex items-center gap-4">
+        <!-- TikTok Link -->
+        <a href="https://tiktok.com" target="_blank" rel="noopener" class="flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-slate-900 text-white text-xs font-bold hover:bg-slate-800 transition shadow-md hover:-translate-y-0.5">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.525 0h3.08c.54 2.8 2.37 5.15 5.09 5.86V9.1c-2.39-.1-4.57-.88-6.3-2.14v8.32c0 4.79-3.88 8.72-8.67 8.72A8.69 8.69 0 0 1 0 15.35c0-4.8 3.89-8.73 8.68-8.73.57 0 1.12.06 1.66.17v3.31a5.41 5.41 0 0 0-1.66-.27c-2.97 0-5.38 2.41-5.38 5.38s2.41 5.38 5.38 5.38 5.38-2.41 5.38-5.38V0z"/></svg>
+          TikTok Lớp
+        </a>
+
+        <!-- Instagram Link -->
+        <a href="https://instagram.com" target="_blank" rel="noopener" class="flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 text-white text-xs font-bold hover:opacity-95 transition shadow-md hover:-translate-y-0.5">
+          <i data-lucide="instagram" class="w-4 h-4"></i>
+          Instagram Lớp
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Activate Lucide Icons -->
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
