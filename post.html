@@ -1,0 +1,516 @@
+```html
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Bài viết | Chuyên Pháp 26–29 | THPT Chuyên Thăng Long</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-sky-50/60 text-slate-700 font-['Plus_Jakarta_Sans'] antialiased min-h-screen flex flex-col">
+
+  <!-- ================= HEADER ================= -->
+  <header class="bg-white/90 backdrop-blur-md border-b border-sky-100 sticky top-0 z-50 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center justify-between gap-4">
+
+      <!-- Logo & Tên trường -->
+      <div class="flex items-center gap-3">
+        <img
+          src="logotruong.png"
+          alt="Logo THPT Chuyên Thăng Long"
+          class="w-12 h-12 rounded-xl object-contain bg-white border border-sky-100 p-0.5 shadow-sm"
+        >
+
+        <div>
+          <span class="text-[10px] font-bold tracking-widest text-sky-500 uppercase block">
+            THPT CHUYÊN THĂNG LONG
+          </span>
+
+          <h1 class="text-xl font-extrabold text-sky-950 flex items-center gap-2">
+            CHUYÊN PHÁP
+            <span class="bg-sky-500 text-white text-[10px] px-2 py-0.5 rounded-full font-bold">
+              26–29
+            </span>
+          </h1>
+        </div>
+      </div>
+
+      <!-- NAV -->
+      <nav class="flex items-center gap-1 bg-sky-50/80 p-1.5 rounded-2xl border border-sky-100/80 text-xs font-bold">
+
+        <a
+          href="index.html"
+          class="flex items-center gap-1.5 px-4 py-2 rounded-xl text-slate-600 hover:text-sky-600 hover:bg-white/60 transition"
+        >
+          <i data-lucide="home" class="w-4 h-4"></i>
+          Trang chủ
+        </a>
+
+        <a
+          href="posts.html"
+          class="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white text-sky-600 shadow-sm transition"
+        >
+          <i data-lucide="newspaper" class="w-4 h-4"></i>
+          Bài viết
+        </a>
+
+        <a
+          href="events.html"
+          class="flex items-center gap-1.5 px-4 py-2 rounded-xl text-slate-600 hover:text-sky-600 hover:bg-white/60 transition"
+        >
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+          Sự kiện
+        </a>
+
+      </nav>
+
+      <!-- Logo lớp -->
+      <div class="hidden md:flex items-center">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-sky-400 to-cyan-300 p-0.5 shadow-sm">
+          <img
+            src="logolop1.png"
+            alt="Logo lớp"
+            class="w-full h-full object-contain bg-white rounded-[10px] p-0.5"
+          >
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- ================= MAIN ================= -->
+  <main class="max-w-5xl mx-auto px-4 py-10 w-full flex-grow">
+
+    <!-- Tiêu đề -->
+    <section class="text-center mb-10">
+
+      <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-100 text-sky-700 text-xs font-bold tracking-wide mb-4">
+        <i data-lucide="newspaper" class="w-4 h-4"></i>
+        BÀI VIẾT
+      </span>
+
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+        Góc Chuyên Pháp 26–29
+      </h2>
+
+      <p class="text-slate-500 mt-3 max-w-2xl mx-auto">
+        Nơi cập nhật những câu chuyện, hoạt động và dấu mốc đáng nhớ
+        trong hành trình 3 năm của chúng mình. 🇫🇷
+      </p>
+
+    </section>
+
+
+    <!-- ================= DANH SÁCH BÀI VIẾT ================= -->
+    <section id="postsContainer" class="space-y-5">
+      <!-- JavaScript sẽ tự render bài viết ở đây -->
+    </section>
+
+
+    <!-- ================= PAGINATION ================= -->
+    <div class="flex justify-center items-center gap-2 mt-10" id="pagination">
+      <!-- JavaScript tự tạo -->
+    </div>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-white border-t border-sky-100 py-8 px-4 mt-12">
+
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+
+      <!-- Copyright -->
+      <div class="text-center sm:text-left">
+        <p class="font-bold text-sky-900 text-base">
+          Chuyên Pháp 26-29 • THPT Chuyên Thăng Long
+        </p>
+
+        <p class="text-xs text-slate-400 mt-1">
+          © 2026 Rinelle. Tous droits réservés.
+        </p>
+      </div>
+
+
+      <!-- Social Links -->
+      <div class="flex flex-wrap justify-center items-center gap-3">
+
+        <!-- Frame -->
+        <a
+          href="https://khunghinh.net/p/ctlchuyenphap2629"
+          target="_blank"
+          rel="noopener"
+          class="flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-sky-500 text-white text-xs font-bold hover:bg-sky-600 transition shadow-md hover:-translate-y-0.5"
+        >
+          <i data-lucide="image" class="w-4 h-4"></i>
+          Frame lớp
+        </a>
+
+
+        <!-- TikTok -->
+        <a
+          href="https://www.tiktok.com/@aephap2629"
+          target="_blank"
+          rel="noopener"
+          class="flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-slate-900 text-white text-xs font-bold hover:bg-slate-800 transition shadow-md hover:-translate-y-0.5"
+        >
+          <i data-lucide="music-2" class="w-4 h-4"></i>
+          TikTok Lớp
+        </a>
+
+
+        <!-- Instagram -->
+        <a
+          href="https://www.instagram.com/_.tartyfrenchiee._/"
+          target="_blank"
+          rel="noopener"
+          class="flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 text-white text-xs font-bold hover:opacity-95 transition shadow-md hover:-translate-y-0.5"
+        >
+          <i data-lucide="instagram" class="w-4 h-4"></i>
+          Instagram Lớp
+        </a>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+  <script>
+
+    /*
+    =====================================================
+    DANH SÁCH BÀI VIẾT
+    =====================================================
+
+    Muốn thêm bài mới thì chỉ cần copy một object
+    rồi đổi thông tin bên trong.
+
+    Mỗi trang hiển thị tối đa 5 bài.
+    */
+
+    const posts = [
+
+      {
+        title: "CHÍNH THỨC KHAI TRƯƠNG CÁC TRANG MẠNG XÃ HỘI & WEBSITE CỦA CHUYÊN PHÁP 26–29",
+        date: "15/08/2026",
+        category: "THÔNG BÁO",
+        icon: "megaphone",
+        excerpt:
+          "Một hành trình mới chính thức bắt đầu! Chuyên Pháp 26–29, THPT Chuyên Thăng Long chính thức ra mắt hệ thống website và các trang mạng xã hội của lớp, nơi lưu giữ những hoạt động, câu chuyện và khoảnh khắc trong suốt hành trình 3 năm.",
+        content:
+          "Từ hôm nay, Chuyên Pháp 26–29 chính thức có một không gian riêng trên Internet! Đây sẽ là nơi chúng mình cập nhật những thông tin, hoạt động, sự kiện và những khoảnh khắc đáng nhớ của lớp trong suốt hành trình tại THPT Chuyên Thăng Long. Hãy cùng theo dõi và đồng hành với chúng mình trong chặng đường 2026–2029 nhé! 🇫🇷💙"
+      },
+
+      /*
+      =================================================
+      CÁC BÀI TIẾP THEO THÊM Ở ĐÂY
+      =================================================
+
+      {
+        title: "TIÊU ĐỀ BÀI VIẾT",
+        date: "16/08/2026",
+        category: "HOẠT ĐỘNG",
+        icon: "sparkles",
+        excerpt: "Mô tả ngắn...",
+        content: "Nội dung bài viết..."
+      },
+
+      */
+
+    ];
+
+
+    /* ================= CẤU HÌNH ================= */
+
+    const postsPerPage = 5;
+
+    let currentPage = 1;
+
+
+    /* ================= RENDER BÀI VIẾT ================= */
+
+    function renderPosts() {
+
+      const container = document.getElementById("postsContainer");
+
+      container.innerHTML = "";
+
+      const start = (currentPage - 1) * postsPerPage;
+      const end = start + postsPerPage;
+
+      const currentPosts = posts.slice(start, end);
+
+
+      /* Nếu chưa có bài */
+      if (currentPosts.length === 0) {
+
+        container.innerHTML = `
+          <div class="bg-white rounded-3xl border border-sky-100 shadow-lg p-10 text-center">
+            <div class="w-14 h-14 mx-auto rounded-2xl bg-sky-50 flex items-center justify-center mb-4">
+              <i data-lucide="newspaper" class="w-7 h-7 text-sky-400"></i>
+            </div>
+
+            <h3 class="font-bold text-slate-800 text-lg">
+              Chưa có bài viết
+            </h3>
+
+            <p class="text-sm text-slate-400 mt-2">
+              Những câu chuyện mới sẽ sớm xuất hiện tại đây. ✨
+            </p>
+          </div>
+        `;
+
+        lucide.createIcons();
+        return;
+      }
+
+
+      /* Render từng bài */
+      currentPosts.forEach((post, index) => {
+
+        const articleNumber = start + index + 1;
+
+        const article = document.createElement("article");
+
+        article.className =
+          "bg-white rounded-3xl border border-sky-100 shadow-lg shadow-sky-100/50 overflow-hidden hover:-translate-y-1 hover:shadow-xl transition duration-300";
+
+
+        article.innerHTML = `
+
+          <!-- Header bài viết -->
+          <div class="p-6 sm:p-8">
+
+            <div class="flex flex-wrap items-center gap-2 mb-4">
+
+              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-sky-100 text-sky-700 text-[11px] font-bold">
+                <i data-lucide="${post.icon}" class="w-3.5 h-3.5"></i>
+                ${post.category}
+              </span>
+
+              <span class="text-xs text-slate-400">
+                ${post.date}
+              </span>
+
+              <span class="ml-auto text-xs font-bold text-sky-300">
+                #${String(articleNumber).padStart(2, "0")}
+              </span>
+
+            </div>
+
+
+            <!-- Tiêu đề -->
+            <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 leading-tight">
+              ${post.title}
+            </h3>
+
+
+            <!-- Mô tả -->
+            <p class="text-slate-600 leading-relaxed mt-4">
+              ${post.excerpt}
+            </p>
+
+
+            <!-- Nút xem bài -->
+            <button
+              onclick="togglePost(this)"
+              class="mt-6 inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-sky-500 text-white text-xs font-bold hover:bg-sky-600 transition"
+            >
+              <span>Xem bài viết</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+
+
+            <!-- Nội dung đầy đủ -->
+            <div class="hidden post-content mt-6 pt-6 border-t border-sky-100">
+
+              <p class="text-slate-600 leading-8">
+                ${post.content}
+              </p>
+
+            </div>
+
+          </div>
+
+        `;
+
+
+        container.appendChild(article);
+
+      });
+
+
+      lucide.createIcons();
+
+    }
+
+
+    /* ================= XEM / ĐÓNG BÀI ================= */
+
+    function togglePost(button) {
+
+      const article = button.closest("article");
+      const content = article.querySelector(".post-content");
+
+      const isHidden = content.classList.contains("hidden");
+
+      content.classList.toggle("hidden");
+
+
+      if (isHidden) {
+
+        button.querySelector("span").textContent = "Thu gọn";
+
+        button.querySelector("i").setAttribute("data-lucide", "chevron-up");
+
+      } else {
+
+        button.querySelector("span").textContent = "Xem bài viết";
+
+        button.querySelector("i").setAttribute("data-lucide", "arrow-right");
+
+      }
+
+      lucide.createIcons();
+
+    }
+
+
+    /* ================= PHÂN TRANG ================= */
+
+    function renderPagination() {
+
+      const pagination = document.getElementById("pagination");
+
+      pagination.innerHTML = "";
+
+      const totalPages = Math.ceil(posts.length / postsPerPage);
+
+
+      /* Nếu chỉ có 1 trang thì không cần pagination */
+      if (totalPages <= 1) return;
+
+
+      /* Nút Previous */
+      if (currentPage > 1) {
+
+        const previous = document.createElement("button");
+
+        previous.innerHTML = `
+          <i data-lucide="chevron-left" class="w-4 h-4"></i>
+        `;
+
+        previous.className =
+          "w-10 h-10 rounded-xl bg-white border border-sky-100 text-sky-600 flex items-center justify-center hover:bg-sky-50 transition";
+
+        previous.onclick = () => {
+
+          currentPage--;
+          updatePage();
+
+        };
+
+        pagination.appendChild(previous);
+
+      }
+
+
+      /* Các số trang */
+      for (let i = 1; i <= totalPages; i++) {
+
+        const button = document.createElement("button");
+
+        button.textContent = i;
+
+        button.className =
+          "w-10 h-10 rounded-xl text-sm font-bold transition " +
+          (
+            i === currentPage
+              ? "bg-rose-500 text-white shadow-md"
+              : "bg-rose-100 text-rose-700 hover:bg-rose-200"
+          );
+
+
+        button.onclick = () => {
+
+          currentPage = i;
+
+          updatePage();
+
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+          });
+
+        };
+
+
+        pagination.appendChild(button);
+
+      }
+
+
+      /* Nút Next */
+      if (currentPage < totalPages) {
+
+        const next = document.createElement("button");
+
+        next.innerHTML = `
+          <i data-lucide="chevron-right" class="w-4 h-4"></i>
+        `;
+
+        next.className =
+          "w-10 h-10 rounded-xl bg-white border border-sky-100 text-sky-600 flex items-center justify-center hover:bg-sky-50 transition";
+
+        next.onclick = () => {
+
+          currentPage++;
+          updatePage();
+
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+          });
+
+        };
+
+        pagination.appendChild(next);
+
+      }
+
+
+      lucide.createIcons();
+
+    }
+
+
+    /* ================= UPDATE ================= */
+
+    function updatePage() {
+
+      renderPosts();
+      renderPagination();
+
+    }
+
+
+    /* ================= KHỞI ĐỘNG ================= */
+
+    updatePage();
+
+  </script>
+
+</body>
+</html>
+```
