@@ -93,7 +93,7 @@
 
 
     <!-- TIÊU ĐỀ -->
-    <section class="text-center mb-10">
+    <section class="text-center mb-8">
 
       <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-100 text-sky-700 text-xs font-bold tracking-wide mb-4">
         <i data-lucide="calendar-days" class="w-4 h-4"></i>
@@ -101,7 +101,7 @@
       </span>
 
       <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-      Tổng hợp sự kiện
+        Tổng hợp sự kiện
       </h2>
 
       <p class="text-slate-500 mt-3 max-w-2xl mx-auto">
@@ -109,6 +109,38 @@
         trong hành trình của Chuyên Pháp 26–29. 🇫🇷
       </p>
 
+    </section>
+
+    <!-- BỘ LỌC NĂM HỌC (TABS) -->
+    <section class="flex justify-center mb-10">
+      <div class="inline-flex flex-wrap justify-center items-center gap-1.5 p-1.5 bg-sky-100/70 rounded-2xl border border-sky-200/60 shadow-inner text-xs font-bold">
+        <button
+          onclick="filterEvents('2026-2027')"
+          id="btn-2026-2027"
+          class="year-tab flex items-center gap-2 px-4 py-2 rounded-xl bg-white text-sky-600 shadow-sm transition duration-200"
+        >
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+          2026 – 2027 (Lớp 10)
+        </button>
+
+        <button
+          onclick="filterEvents('2027-2028')"
+          id="btn-2027-2028"
+          class="year-tab flex items-center gap-2 px-4 py-2 rounded-xl text-slate-600 hover:text-sky-600 hover:bg-white/50 transition duration-200"
+        >
+          <i data-lucide="flame" class="w-3.5 h-3.5"></i>
+          2027 – 2028 (Lớp 11)
+        </button>
+
+        <button
+          onclick="filterEvents('2028-2029')"
+          id="btn-2028-2029"
+          class="year-tab flex items-center gap-2 px-4 py-2 rounded-xl text-slate-600 hover:text-sky-600 hover:bg-white/50 transition duration-200"
+        >
+          <i data-lucide="trophy" class="w-3.5 h-3.5"></i>
+          2028 – 2029 (Lớp 12)
+        </button>
+      </div>
     </section>
 
 
@@ -194,22 +226,10 @@
     =====================================================
     DANH SÁCH SỰ KIỆN
     =====================================================
-
-    Muốn thêm sự kiện mới:
-    chỉ cần thêm một object vào đây.
-
-    Ví dụ:
-
-    {
-      day: "10",
-      month: "09",
-      year: "2026",
-      title: "Tên sự kiện",
-      type: "HOẠT ĐỘNG",
-      icon: "sparkles",
-      description: "Mô tả sự kiện..."
-    }
-
+    Thêm trường `schoolYear` để xác định năm học:
+    - "2026-2027"
+    - "2027-2028"
+    - "2028-2029"
     =====================================================
     */
 
@@ -219,37 +239,74 @@
         day: "26",
         month: "08",
         year: "2026",
+        schoolYear: "2026-2027",
         title: "Tựu trường",
         type: "CỘT MỐC",
         icon: "school",
-        description:
-          "Ngày tựu trường năm học 2026–2027."
+        description: "Ngày tựu trường năm học 2026–2027."
       },
 
       {
         day: "05",
         month: "09",
         year: "2026",
+        schoolYear: "2026-2027",
         title: "Khai giảng năm học 2026–2027",
         type: "SỰ KIỆN",
         icon: "graduation-cap",
-        description:
-          "Lễ khai giảng năm học 2026–2027 của toàn quốc."
+        description: "Lễ khai giảng năm học 2026–2027 của toàn quốc."
+      },
+
+      // Ví dụ dữ liệu cho Lớp 11 (sau này xóa hoặc sửa lại)
+      {
+        day: "05",
+        month: "09",
+        year: "2027",
+        schoolYear: "2027-2028",
+        title: "Khai giảng năm học 2027–2028",
+        type: "SỰ KIỆN",
+        icon: "graduation-cap",
+        description: "Bắt đầu chặng đường mới của Lớp 11 Chuyên Pháp!"
+      },
+
+      // Ví dụ dữ liệu cho Lớp 12 (sau này xóa hoặc sửa lại)
+      {
+        day: "05",
+        month: "09",
+        year: "2028",
+        schoolYear: "2028-2029",
+        title: "Khai giảng năm học 2028–2029",
+        type: "SỰ KIỆN",
+        icon: "graduation-cap",
+        description: "Lễ khai giảng cuối cùng dưới mái trường THPT Chuyên Thăng Long."
       }
 
     ];
 
+    let currentSchoolYear = "2026-2027";
 
     /* ================= RENDER ================= */
 
     function renderEvents() {
 
       const container = document.getElementById("eventsContainer");
-
       container.innerHTML = "";
 
+      // Lọc danh sách sự kiện theo năm học đang chọn
+      const filteredEvents = events.filter(e => e.schoolYear === currentSchoolYear);
 
-      events.forEach((event, index) => {
+      if (filteredEvents.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-12 bg-white/50 rounded-3xl border border-sky-100">
+            <i data-lucide="calendar-x" class="w-10 h-10 mx-auto text-sky-300 mb-2"></i>
+            <p class="text-slate-500 font-bold text-sm">Chưa có sự kiện nào cho năm học này.</p>
+          </div>
+        `;
+        lucide.createIcons();
+        return;
+      }
+
+      filteredEvents.forEach((event, index) => {
 
         const isLeft = index % 2 === 0;
 
@@ -346,6 +403,24 @@
 
     }
 
+    /* ================= LOGIC ĐỔI TAB ================= */
+
+    function filterEvents(schoolYear) {
+      currentSchoolYear = schoolYear;
+
+      // Cập nhật giao diện nút Active
+      document.querySelectorAll('.year-tab').forEach(btn => {
+        btn.className = "year-tab flex items-center gap-2 px-4 py-2 rounded-xl text-slate-600 hover:text-sky-600 hover:bg-white/50 transition duration-200";
+      });
+
+      const activeBtn = document.getElementById(`btn-${schoolYear}`);
+      if (activeBtn) {
+        activeBtn.className = "year-tab flex items-center gap-2 px-4 py-2 rounded-xl bg-white text-sky-600 shadow-sm transition duration-200";
+      }
+
+      renderEvents();
+    }
+
 
     /* ================= KHỞI ĐỘNG ================= */
 
@@ -355,4 +430,3 @@
 
 </body>
 </html>
-```
