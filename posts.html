@@ -90,7 +90,7 @@
   <main class="max-w-5xl mx-auto px-4 py-10 w-full flex-grow">
 
     <!-- Tiêu đề -->
-    <section class="text-center mb-10">
+    <section class="text-center mb-8">
 
       <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-100 text-sky-700 text-xs font-bold tracking-wide mb-4">
         <i data-lucide="newspaper" class="w-4 h-4"></i>
@@ -106,6 +106,38 @@
         trong hành trình 3 năm của chúng mình. 🇫🇷
       </p>
 
+    </section>
+
+    <!-- BỘ LỌC NĂM HỌC (TABS) -->
+    <section class="flex justify-center mb-10">
+      <div class="inline-flex flex-wrap justify-center items-center gap-1.5 p-1.5 bg-sky-100/70 rounded-2xl border border-sky-200/60 shadow-inner text-xs font-bold">
+        <button
+          onclick="filterSchoolYear('2026-2027')"
+          id="btn-2026-2027"
+          class="year-tab flex items-center gap-2 px-4 py-2 rounded-xl bg-white text-sky-600 shadow-sm transition duration-200"
+        >
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+          2026 – 2027 (Lớp 10)
+        </button>
+
+        <button
+          onclick="filterSchoolYear('2027-2028')"
+          id="btn-2027-2028"
+          class="year-tab flex items-center gap-2 px-4 py-2 rounded-xl text-slate-600 hover:text-sky-600 hover:bg-white/50 transition duration-200"
+        >
+          <i data-lucide="flame" class="w-3.5 h-3.5"></i>
+          2027 – 2028 (Lớp 11)
+        </button>
+
+        <button
+          onclick="filterSchoolYear('2028-2029')"
+          id="btn-2028-2029"
+          class="year-tab flex items-center gap-2 px-4 py-2 rounded-xl text-slate-600 hover:text-sky-600 hover:bg-white/50 transition duration-200"
+        >
+          <i data-lucide="trophy" class="w-3.5 h-3.5"></i>
+          2028 – 2029 (Lớp 12)
+        </button>
+      </div>
     </section>
 
 
@@ -191,11 +223,11 @@
     =====================================================
     DANH SÁCH BÀI VIẾT
     =====================================================
-
-    Muốn thêm bài mới thì chỉ cần copy một object
-    rồi đổi thông tin bên trong.
-
-    Mỗi trang hiển thị tối đa 5 bài.
+    Thêm trường `schoolYear` để lọc bài viết theo năm học:
+    - "2026-2027"
+    - "2027-2028"
+    - "2028-2029"
+    =====================================================
     */
 
     const posts = [
@@ -203,29 +235,14 @@
       {
         title: "NGÔI NHÀ TRÊN MẠNG CỦA CHUYÊN PHÁP 26–29",
         date: "15/08/2026",
+        schoolYear: "2026-2027",
         category: "THÔNG BÁO",
         icon: "megaphone",
         excerpt:
           "Một hành trình mới chính thức bắt đầu, Pháp 26-29 chính thức có ngôi nhà nhỏ trên không gian số",
         content:
           "Từ hôm nay, Chuyên Pháp 26–29 chính thức có một không gian riêng trên Internet! Đây sẽ là nơi chúng mình cập nhật những thông tin, hoạt động, sự kiện và những khoảnh khắc đáng nhớ của lớp trong suốt hành trình tại THPT Chuyên Thăng Long. Hãy cùng theo dõi và đồng hành với chúng mình trong chặng đường 2026–2029 nhé!"
-      },
-
-      /*
-      =================================================
-      CÁC BÀI TIẾP THEO THÊM Ở ĐÂY
-      =================================================
-
-      {
-        title: "TIÊU ĐỀ BÀI VIẾT",
-        date: "16/08/2026",
-        category: "HOẠT ĐỘNG",
-        icon: "sparkles",
-        excerpt: "Mô tả ngắn...",
-        content: "Nội dung bài viết..."
-      },
-
-      */
+      }
 
     ];
 
@@ -233,8 +250,8 @@
     /* ================= CẤU HÌNH ================= */
 
     const postsPerPage = 5;
-
     let currentPage = 1;
+    let currentSchoolYear = "2026-2027";
 
 
     /* ================= RENDER BÀI VIẾT ================= */
@@ -242,13 +259,15 @@
     function renderPosts() {
 
       const container = document.getElementById("postsContainer");
-
       container.innerHTML = "";
+
+      // Lọc bài viết theo năm học
+      const filteredPosts = posts.filter(post => post.schoolYear === currentSchoolYear);
 
       const start = (currentPage - 1) * postsPerPage;
       const end = start + postsPerPage;
 
-      const currentPosts = posts.slice(start, end);
+      const currentPosts = filteredPosts.slice(start, end);
 
 
       /* Nếu chưa có bài */
@@ -265,7 +284,7 @@
             </h3>
 
             <p class="text-sm text-slate-400 mt-2">
-              Những câu chuyện mới sẽ sớm xuất hiện tại đây. ✨
+              Những câu chuyện mới của năm học này sẽ sớm xuất hiện tại đây. ✨
             </p>
           </div>
         `;
@@ -394,10 +413,11 @@
 
       pagination.innerHTML = "";
 
-      const totalPages = Math.ceil(posts.length / postsPerPage);
+      const filteredPosts = posts.filter(post => post.schoolYear === currentSchoolYear);
+      const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
 
 
-      /* Nếu chỉ có 1 trang thì không cần pagination */
+      /* Nếu chỉ có 1 trang hoặc 0 trang thì không cần pagination */
       if (totalPages <= 1) return;
 
 
@@ -436,8 +456,8 @@
           "w-10 h-10 rounded-xl text-sm font-bold transition " +
           (
             i === currentPage
-              ? "bg-rose-500 text-white shadow-md"
-              : "bg-rose-100 text-rose-700 hover:bg-rose-200"
+              ? "bg-sky-500 text-white shadow-md"
+              : "bg-white text-slate-600 border border-sky-100 hover:bg-sky-50"
           );
 
 
@@ -494,6 +514,26 @@
     }
 
 
+    /* ================= LOGIC ĐỔI TAB NĂM HỌC ================= */
+
+    function filterSchoolYear(schoolYear) {
+      currentSchoolYear = schoolYear;
+      currentPage = 1; // Reset về trang 1 khi đổi năm học
+
+      // Đổi trạng thái giao diện nút tab
+      document.querySelectorAll('.year-tab').forEach(btn => {
+        btn.className = "year-tab flex items-center gap-2 px-4 py-2 rounded-xl text-slate-600 hover:text-sky-600 hover:bg-white/50 transition duration-200";
+      });
+
+      const activeBtn = document.getElementById(`btn-${schoolYear}`);
+      if (activeBtn) {
+        activeBtn.className = "year-tab flex items-center gap-2 px-4 py-2 rounded-xl bg-white text-sky-600 shadow-sm transition duration-200";
+      }
+
+      updatePage();
+    }
+
+
     /* ================= UPDATE ================= */
 
     function updatePage() {
@@ -512,4 +552,3 @@
 
 </body>
 </html>
-```
